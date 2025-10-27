@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FutbolTotal - Inicio</title>
     <link rel="icon" href="Imagenes/icono.webp" type="image/x-icon">
-    <title>FutbolTotal - Equipos</title>
+
     <style>
         /* Estilos generales */
         * {
@@ -132,6 +133,40 @@
             padding: 30px 0;
         }
         
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1575361204480-aadea25e6e68?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn-hero {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .btn-hero:hover {
+            background-color: #ffb300;
+        }
+        
         .section-title {
             text-align: center;
             margin-bottom: 30px;
@@ -151,7 +186,7 @@
             background-color: var(--secondary-color);
         }
         
-        .teams-grid {
+        .news-grid, .matches-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
@@ -397,6 +432,14 @@
                 margin: 5px;
             }
             
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
             .auth-buttons {
                 margin-top: 10px;
             }
@@ -414,9 +457,9 @@
             
             <nav>
                 <ul>
-                    <li><a href="Index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="Index.html" class="nav-link active">Inicio</a></li>
                     <li><a href="noticias.html" class="nav-link">Noticias</a></li>
-                    <li><a href="equipos.html" class="nav-link active">Equipos</a></li>
+                    <li><a href="equipos.html" class="nav-link">Equipos</a></li>
                     <li><a href="partidos.html" class="nav-link">Partidos</a></li>
                 </ul>
             </nav>
@@ -437,100 +480,81 @@
     <!-- Main Content -->
     <main>
         <div class="container">
-            <h2 class="section-title">Equipos Destacados</h2>
-            <div class="teams-grid">
+            <div class="hero">
+                <h2>Bienvenido a FutbolTotal</h2>
+                <p>Tu portal definitivo para seguir todo sobre el mundo del fútbol: noticias, equipos, partidos y mucho más.</p>
+                <button class="btn btn-hero" id="explore-btn">Explorar Ahora</button>
+            </div>
+            
+            <h2 class="section-title">Últimas Noticias</h2>
+            <div class="news-grid">
                 <div class="card">
                     <div class="card-img">
-                        <img src="Imagenes/Real madrid equipo.avif" alt="Real Madrid">
+                        <img src="Imagenes/Madrid_Champions.jpg" alt="Noticia 1">
                     </div>
                     <div class="card-content">
-                        <h3>Real Madrid</h3>
-                        <p><strong>Fundado:</strong> 1902<br>
-                        <strong>Estadio:</strong> Santiago Bernabéu<br>
-                        <strong>Entrenador:</strong> Carlo Ancelotti</p>
+                        <h3>El Real Madrid gana la Champions League</h3>
+                        <p>El equipo merengue se corona campeón de Europa por decimocuarta vez tras una emocionante final.</p>
                         <div class="card-meta">
-                            <span>Liga: La Liga</span>
-                            <span>Trofeos: 98</span>
+                            <span>Hace 2 horas</span>
+                            <span>Fútbol Europeo</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card">
                     <div class="card-img">
-                        <img src="Imagenes/EquipoBarsa.webp" alt="FC Barcelona">
+                        <img src="Imagenes/Messi_Argentina.jpg" alt="Noticia 2">
                     </div>
                     <div class="card-content">
-                        <h3>FC Barcelona</h3>
-                        <p><strong>Fundado:</strong> 1899<br>
-                        <strong>Estadio:</strong> Camp Nou<br>
-                        <strong>Entrenador:</strong> Xavi Hernández</p>
+                        <h3>Messi anuncia su retiro de la selección</h3>
+                        <p>El astro argentino confirma que no jugará más con la albiceleste tras el próximo mundial.</p>
                         <div class="card-meta">
-                            <span>Liga: La Liga</span>
-                            <span>Trofeos: 95</span>
+                            <span>Hace 5 horas</span>
+                            <span>Selecciones</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card">
                     <div class="card-img">
-                        <img src="Imagenes/ManchesterCity.webp" alt="Manchester City">
+                        <img src="Imagenes/Haaland_City.webp" alt="Noticia 3">
                     </div>
                     <div class="card-content">
-                        <h3>Manchester City</h3>
-                        <p><strong>Fundado:</strong> 1880<br>
-                        <strong>Estadio:</strong> Etihad Stadium<br>
-                        <strong>Entrenador:</strong> Pep Guardiola</p>
+                        <h3>Nuevo fichaje récord en la Premier League</h3>
+                        <p>El Manchester City anuncia la contratación del delantero noruego por 150 millones de euros.</p>
                         <div class="card-meta">
-                            <span>Liga: Premier League</span>
-                            <span>Trofeos: 32</span>
+                            <span>Hace 1 día</span>
+                            <span>Mercado de Fichajes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="section-title">Próximos Partidos Destacados</h2>
+            <div class="matches-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Real Madrid vs Barcelona</h3>
+                        <p><strong>Competición:</strong> La Liga<br>
+                        <strong>Fecha:</strong> 28 de Octubre, 2023<br>
+                        <strong>Hora:</strong> 21:00 CET</p>
+                        <div class="card-meta">
+                            <span>En Vivo: Sí</span>
+                            <span>TV: Movistar+</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card">
-                    <div class="card-img">
-                        <img src="Imagenes/BayernMunich.avif" alt="Bayern Munich">
-                    </div>
                     <div class="card-content">
-                        <h3>Bayern Munich</h3>
-                        <p><strong>Fundado:</strong> 1900<br>
-                        <strong>Estadio:</strong> Allianz Arena<br>
-                        <strong>Entrenador:</strong> Thomas Tuchel</p>
+                        <h3>Manchester City vs Liverpool</h3>
+                        <p><strong>Competición:</strong> Premier League<br>
+                        <strong>Fecha:</strong> 1 de Noviembre, 2023<br>
+                        <strong>Hora:</strong> 17:30 GMT</p>
                         <div class="card-meta">
-                            <span>Liga: Bundesliga</span>
-                            <span>Trofeos: 82</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-img">
-                        <img src="Imagenes/Psg.jpg" alt="PSG">
-                    </div>
-                    <div class="card-content">
-                        <h3>Paris Saint-Germain</h3>
-                        <p><strong>Fundado:</strong> 1970<br>
-                        <strong>Estadio:</strong> Parc des Princes<br>
-                        <strong>Entrenador:</strong> Christophe Galtier</p>
-                        <div class="card-meta">
-                            <span>Liga: Ligue 1</span>
-                            <span>Trofeos: 46</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-img">
-                        <img src="Imagenes/JuventusChilenaCR7.avif" alt="Juventus">
-                    </div>
-                    <div class="card-content">
-                        <h3>Juventus</h3>
-                        <p><strong>Fundado:</strong> 1897<br>
-                        <strong>Estadio:</strong> Allianz Stadium<br>
-                        <strong>Entrenador:</strong> Massimiliano Allegri</p>
-                        <div class="card-meta">
-                            <span>Liga: Serie A</span>
-                            <span>Trofeos: 70</span>
+                            <span>En Vivo: Sí</span>
+                            <span>TV: Sky Sports</span>
                         </div>
                     </div>
                 </div>
@@ -762,6 +786,14 @@
             
             // Inicializar estado de autenticación
             checkAuthStatus();
+            
+            // Botón explorar
+            const exploreBtn = document.getElementById('explore-btn');
+            if (exploreBtn) {
+                exploreBtn.addEventListener('click', function() {
+                    window.location.href = 'noticias.html';
+                });
+            }
         });
     </script>
 </body>
